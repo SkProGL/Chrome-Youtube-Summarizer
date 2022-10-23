@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+</head>
+
+<body>
+    <button id="summaryButton">Show</button>
+    <button id="refreshButton">Update</button>
+    <input id="intervalInput" type="number" min="1" title="will add newline, for specified timecode difference"
+        placeholder="Split every x (sec)"></input>
+    <img src='icons/YS-2.png' id="extensionIcon"></img>
+    <div class="radio">
+        <input class="radio_input" value="a" type="radio" id="firstOption" name="summarizer">
+        <label class="radio_label" for="firstOption" title="may not work after some time">summari</label>
+        <input class="radio_input" value="b" type="radio" id="secondOption" name="summarizer">
+        <label class="radio_label" for="secondOption" title="best option compared to others">summari (login)</label>
+        <input class="radio_input" value="c" type="radio" id="thirdOption" name="summarizer">
+        <label class="radio_label" for="thirdOption" title="has word limitation">quillbot (&lt1200 words)</label>
+        <button id="automateButton" title="if content is empty or not up-to-date, try this button on opened video">get
+            content</button>
+    </div>
+    <div id="subtitleStats">
+        <label id="delayLabel"></label>
+        <div style="display: inline-block;">url_</div><a id="temporaryLinkLabel"></a>
+        <label id="wordCount"></label>
+    </div>
+    <div id="contentGroup">
+        <div id="leftRow">
+            <p id="transcriptText" title="Click to copy subtitles"></p>
+            <button id="loadFullButton">Press to see full content</button>
+        </div>
+        <div id="rightRow">
+            <p id="formattedText" title="Click to copy formatted text">Output text content</p>
+        </div>
+    </div>
+    <link rel='stylesheet' href='popup.css'>
+    <script type='text/javascript' src='popup.js'></script>
+</body>
+
+</html>

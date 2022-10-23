@@ -1,0 +1,48 @@
+{
+    "name": "YouTubeSummarizer",
+    "description": "basic summarizer",
+    "version": "0.1",
+    "manifest_version": 3,
+    "permissions": [
+        "cookies",
+        "storage",
+        "contextMenus",
+        "webRequest",
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Alt+B"
+            },
+            "description": "open menu"
+        }
+    },
+    "action": {
+        "default_title": "summarizer, alt+b",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "icons/YS-2.png",
+        "48": "icons/YS-2.png",
+        "128": "icons/YS-2.png"
+    }
+}
